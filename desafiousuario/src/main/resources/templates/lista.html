@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Aluno</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="usuario: ${usuarios}">
+                <td data-th-text="${usuario.nome}"></td>
+                <td data-th-text="${usuario.cpf}"></td>
+                <td data-th-text="${usuario.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
