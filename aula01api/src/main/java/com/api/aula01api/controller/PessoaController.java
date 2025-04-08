@@ -3,8 +3,8 @@ package com.api.aula01api.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.api.aula01api.dto.PessoaDto;
 import com.api.aula01api.entities.Pessoa;
-import com.api.aula01api.repository.PessoaRepository;
 import com.api.aula01api.service.PessoaService;
 
 import java.util.List;
@@ -13,10 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @RestController
 @RequestMapping("/pessoa")
@@ -38,15 +37,12 @@ public class PessoaController {
     }
 
     @GetMapping("/lista")
-    public ResponseEntity<List<Pessoa>> listagem() {
+    public ResponseEntity<List<PessoaDto>> listagem() {
         return service.lista();
     }
-    
 
-    // @GetMapping("/lista")
-    // public ResponseEntity<List<Pessoa>> lista() {
-    //     List<Pessoa> pessoaListada = repository.findAll();
-    //     return new ResponseEntity<>(pessoaListada, HttpStatus.OK);
-    // }
-
+    @GetMapping("/busca/{id}")
+    public ResponseEntity<PessoaDto> buscaPorId(@PathVariable("id") int id) {
+        return service.buscaPorId(id);
+    }
 }
