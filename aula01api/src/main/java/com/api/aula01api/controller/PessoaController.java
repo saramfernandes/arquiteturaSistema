@@ -12,9 +12,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
@@ -44,5 +46,15 @@ public class PessoaController {
     @GetMapping("/busca/{id}")
     public ResponseEntity<PessoaDto> buscaPorId(@PathVariable("id") int id) {
         return service.buscaPorId(id);
+    }
+
+    @DeleteMapping("/excluir/{id}")
+    public ResponseEntity<String> excluir(@PathVariable("id") int id) {
+        return service.excluir(id);
+    }
+
+    @PutMapping("/editar/{id}")
+    public ResponseEntity<String> editar(@RequestBody Pessoa pessoa, @PathVariable("id") int id) {
+        return service.editar(pessoa, id);
     }
 }
