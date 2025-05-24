@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aula01felipe.exagonal.adapters.convertes.UsuarioConverter;
 import com.aula01felipe.exagonal.adapters.dto.UsuarioDto;
-import com.aula01felipe.exagonal.convertes.UsuarioConverter;
 import com.aula01felipe.exagonal.core.ports.in.UsuarioServicePort;
 
 @RestController
