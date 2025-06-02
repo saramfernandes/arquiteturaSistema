@@ -1,28 +1,18 @@
-package com.aula01felipe.exagonal.adapters.entities;
+package com.aula01felipe.exagonal.aplicacao.usecases.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+public class UsuarioDto {
 
-@Entity
-@Table(name = "usuario")
-public class UsuarioEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
     private String email;
     
-    public UsuarioEntity(int id, String nome, String email) {
+    public UsuarioDto(int id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
     }
 
-    public UsuarioEntity() {
+    public UsuarioDto() {
     }
 
     public int getId() {
@@ -47,6 +37,6 @@ public class UsuarioEntity {
 
     public void setEmail(String email) {
         this.email = email;
-    } 
-
+    }
+   
 }

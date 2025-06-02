@@ -1,4 +1,4 @@
-package com.aula01felipe.exagonal.core.ports.out;
+package com.aula01felipe.exagonal.aplicacao.ports.out;
 
 import com.aula01felipe.exagonal.core.domain.Usuario;
 
