@@ -1,4 +1,4 @@
-package com.aula01felipe.exagonal.adapters.controllers;
+package com.aula01felipe.exagonal.infraestrutura.adapters.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aula01felipe.exagonal.adapters.convertes.UsuarioConverter;
-import com.aula01felipe.exagonal.adapters.dto.UsuarioDto;
-import com.aula01felipe.exagonal.core.ports.in.UsuarioServicePort;
+import com.aula01felipe.exagonal.aplicacao.ports.in.UsuarioServicePort;
+import com.aula01felipe.exagonal.aplicacao.usecases.convertes.UsuarioConverter;
+import com.aula01felipe.exagonal.aplicacao.usecases.dto.UsuarioDto;
 
 @RestController
 @RequestMapping("/usuario")

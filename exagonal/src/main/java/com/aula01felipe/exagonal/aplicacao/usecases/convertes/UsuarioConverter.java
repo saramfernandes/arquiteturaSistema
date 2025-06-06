@@ -1,10 +1,10 @@
-package com.aula01felipe.exagonal.adapters.convertes;
+package com.aula01felipe.exagonal.aplicacao.usecases.convertes;
 
 import org.springframework.stereotype.Component;
 
-import com.aula01felipe.exagonal.adapters.dto.UsuarioDto;
-import com.aula01felipe.exagonal.adapters.entities.UsuarioEntity;
+import com.aula01felipe.exagonal.aplicacao.usecases.dto.UsuarioDto;
 import com.aula01felipe.exagonal.core.domain.Usuario;
+import com.aula01felipe.exagonal.domain.entities.UsuarioEntity;
 
 @Component
 public class UsuarioConverter {
